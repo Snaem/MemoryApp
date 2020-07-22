@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { User } from 'src/app/pages/shared/class/user';
+import { UserLog } from 'src/app/pages/shared/class/userLog';
 
 @Component({
   selector: 'mmy-login-form',
@@ -10,12 +11,13 @@ import { User } from 'src/app/pages/shared/class/user';
 export class LoginFormComponent implements OnInit {
 
   userForm = this.fb.group({
-    login: [''],
+    username: [''],
     password: ['']
   });
 
-  user: User;
+  @Output() logUser: EventEmitter<UserLog> = new EventEmitter();
 
+  userLog: UserLog;
 
   constructor(private fb: FormBuilder) { }
 
@@ -23,6 +25,9 @@ export class LoginFormComponent implements OnInit {
   }
 
   onSubmit() {
+    this.userLog = new UserLog(this.userForm.value.username, this.userForm.value.password);
+
+    this.logUser.emit(this.userLog);
   }
 
 }
