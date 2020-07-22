@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { User } from 'src/app/pages/shared/class/user';
 
 @Component({
   selector: 'mmy-signin-form',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninFormComponent implements OnInit {
 
-  constructor() { }
+  userForm = this.fb.group({
+    firstname: [''],
+    lastname: [''],
+    email: [''],
+    login: [''],
+    password: ['']
+  });
+
+  user: User;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
 
+  onSubmit() {
+
+  }
 }

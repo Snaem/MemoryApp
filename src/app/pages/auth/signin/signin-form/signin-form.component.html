@@ -1,1 +1,39 @@
-<p>signin-form works!</p>
+<div class="signin-form">
+  <div class="infos">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label>
+          Prénom:
+          <input type="text" formControlName="firstname">
+        </label>
+      </div>
+      <div>
+        <label>
+          Nom:
+          <input type="text" formControlName="lastname">
+        </label>
+      </div>
+      <div>
+        <label>
+          Email:
+          <input type="email" formControlName="email">
+        </label>
+      </div>
+      <div>
+        <label>
+          Login:
+          <input type="text" formControlName="login">
+        </label>
+      </div>
+      <div>
+        <label>
+          Mot de passe:
+          <input type="password" formControlName="password">
+        </label>
+      </div>
+    </form>
+  </div>
+  <div class="signin-button">
+
+  </div>
+</div>
