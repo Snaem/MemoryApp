@@ -25,6 +25,14 @@ export class SigninFormComponent implements OnInit {
   }
 
   onSubmit() {
+    this.user = new User(
+      this.userForm.value.login,
+      this.userForm.value.password,
+      this.userForm.value.firstname,
+      this.userForm.value.lastname,
+      this.userForm.value.email);
+
+    console.log(this.user);
 
   }
 }
