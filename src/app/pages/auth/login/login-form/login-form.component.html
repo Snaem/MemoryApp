@@ -1,24 +1,21 @@
 <div class="login-form">
-
+  <div class="login-connexion">
+    <h2>Connexion</h2>
+  </div>
   <div class="infos">
     <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-      <div>
-        <label>
-          Username:
-          <input type="text" formControlName="username">
-        </label>
+      <div class="username">
+        <input type="text" formControlName="username" placeholder="Username">
       </div>
-      <div>
-        <label>
-          Mot de passe:
-          <input type="password" formControlName="password">
-        </label>
+      <div class="password">
+        <input type="password" formControlName="password" placeholder="Mot de passe">
       </div>
       <div class="login-button">
-        <button mat-raised-button color="primary">Se connecter</button>
+        <button mat-raised-button color="primary" [routerLink]="['/dashboard']">Se connecter</button>
       </div>
     </form>
   </div>
-
-  <div class="sign-button"></div>
+  <div class="sign-button">
+    <h3 [routerLink]="['/sign-in']">Pas de compte ? <b>S'inscrire ici !</b></h3>
+  </div>
 </div>
