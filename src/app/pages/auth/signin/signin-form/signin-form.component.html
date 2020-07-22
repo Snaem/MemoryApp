@@ -1,39 +1,27 @@
 <div class="signin-form">
   <div class="infos">
     <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-      <div>
-        <label>
-          Prénom:
-          <input type="text" formControlName="firstname">
-        </label>
+      <div class="signin-input">
+        <input type="text" formControlName="firstname" placeholder="Prénom">
       </div>
-      <div>
-        <label>
-          Nom:
-          <input type="text" formControlName="lastname">
-        </label>
+      <div class="signin-input">
+        <input type="text" formControlName="lastname" placeholder="Nom">
       </div>
-      <div>
-        <label>
-          Email:
-          <input type="email" formControlName="email">
-        </label>
+      <div class="signin-input">
+        <input type="email" formControlName="email" placeholder="Email">
       </div>
-      <div>
-        <label>
-          Username:
-          <input type="text" formControlName="username">
-        </label>
+      <div class="signin-input">
+        <input type="text" formControlName="username" placeholder="Username">
       </div>
-      <div>
-        <label>
-          Mot de passe:
-          <input type="password" formControlName="password">
-        </label>
+      <div class="signin-input">
+        <input type="password" formControlName="password" placeholder="Mot de passe">
       </div>
       <div class="signin-button">
-        <button mat-raised-button color="primary">S'enregistrer !</button>
+        <button mat-raised-button color="primary">Inscrit toi maintenant !</button>
       </div>
     </form>
+  </div>
+  <div class="connexion">
+    <h3 [routerLink]="['']">Déjà inscrit ? <b>Connecte toi ici !</b></h3>
   </div>
 </div>
