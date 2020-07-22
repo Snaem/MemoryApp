@@ -8,7 +8,7 @@ import { User } from 'src/app/pages/shared/class/user';
 })
 export class UserService {
 
-  path = '/users';
+  path = 'users';
 
   URL = environment.Url;
 

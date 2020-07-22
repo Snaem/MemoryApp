@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { User } from 'src/app/pages/shared/class/user';
 
@@ -13,11 +13,13 @@ export class SigninFormComponent implements OnInit {
     firstname: [''],
     lastname: [''],
     email: [''],
-    login: [''],
+    username: [''],
     password: ['']
   });
 
   user: User;
+
+  @Output() saveUser: EventEmitter<User> = new EventEmitter();
 
   constructor(private fb: FormBuilder) { }
 
@@ -26,13 +28,13 @@ export class SigninFormComponent implements OnInit {
 
   onSubmit() {
     this.user = new User(
-      this.userForm.value.login,
+      this.userForm.value.username,
       this.userForm.value.password,
       this.userForm.value.firstname,
       this.userForm.value.lastname,
       this.userForm.value.email);
 
-    console.log(this.user);
-
+    this.saveUser.emit(this.user);
   }
+
 }
