@@ -1,5 +1,4 @@
 .create-playlist {
-  height: 100%;
   display: flex;
   background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(25, 250, 231, 0.7679446778711485) 0%, rgba(255, 255, 255, 1) 50%);
 }
@@ -12,10 +11,11 @@ mmy-navbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  border-left: 4px white solid;
 }
 
 .playlist-name h1 {
+  margin-top: 50px;
   color: #2599FB;
 }
 
@@ -34,6 +34,7 @@ mmy-navbar {
   border-bottom: 2px #2599FB solid;
   background-color: rgba(255, 255, 255, 0);
   font-size: 1.2rem;
+  color: #F97332;
 }
 
 .playlist-name input:focus {

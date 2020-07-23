@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Music } from '../../shared/class/music';
 import { MusicService } from '../shared/services/music.service';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Playlist } from '../../shared/class/playlist';
 
 @Component({
+  // tslint:disable-next-line: component-selector
   selector: 'mmy-create-playlist',
   templateUrl: './create-playlist.component.html',
   styleUrls: ['./create-playlist.component.scss']
@@ -12,7 +14,11 @@ export class CreatePlaylistComponent implements OnInit {
 
   allMusic: Music[];
 
+  playlistToSave: Music[];
+
   isPlaylist = true;
+
+  newPlaylist: Playlist;
 
   playlistForm = this.fb.group({
     playlistTitle: ['', [
@@ -33,6 +39,11 @@ export class CreatePlaylistComponent implements OnInit {
     });
   }
 
+  savePlaylist(musics: Music[]) {
+    this.playlistToSave = musics;
+  }
 
-  onSubmit() { }
+  onSubmit() {
+    this.newPlaylist = new Playlist(this.playlistForm.value.playlistTitle, this.playlistToSave);
+  }
 }
