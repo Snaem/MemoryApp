@@ -8,7 +8,8 @@ import { Music } from 'src/app/pages/shared/class/music';
 })
 export class MusicListComponent implements OnInit {
 
-  @Input() firstFiveMusic: Music[];
+  @Input() musicToDisplay: Music[];
+
 
   constructor() { }
 

@@ -1,0 +1,26 @@
+.create-playlist {
+  height: 100%;
+  display: flex;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(25, 250, 231, 0.7679446778711485) 0%, rgba(255, 255, 255, 1) 50%);
+}
+
+mmy-navbar {
+  height: 100%;
+}
+
+.playlist-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playlist-name form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ;
+}
+
+.musics {
+  width: 100%;
+}

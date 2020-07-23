@@ -1,1 +1,20 @@
-<p>create-playlist works!</p>
+<div class="create-playlist">
+  <div class="navbar">
+    <mmy-navbar></mmy-navbar>
+  </div>
+  <div class="playlist-name">
+    <h1>Ici, tu pourras créer facilement ta playlist en sélectionnant les vidéos qui t'intéresse ! </h1>
+    <form [formGroup]="playlistForm" (ngSubmit)="onSubmit()" #ngForm="ngForm">
+      <input type="text" formControlName="playlistTitle" placeholder="Le nom de ta playlist"
+        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Le lien de ta pépite ici !'">
+      <ng-container *ngIf="ngForm.submitted && playlistForm.get('ytbLink').invalid">
+        <span *ngIf="playlistForm.get('ytbLink').hasError('required')">
+          <p>Un lien Youtube est requis.</p>
+        </span>
+      </ng-container>
+      <div class="musics">
+        <mmy-music-list [musicToDisplay]="allMusic"></mmy-music-list>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 .music-cards {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -9,6 +10,7 @@
   border-radius: 6px;
   height: 300px;
   width: 250px;
+  margin-top: 25px;
 }
 
 .thumbnail {
