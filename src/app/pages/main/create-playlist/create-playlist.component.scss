@@ -1,5 +1,6 @@
 .create-playlist {
   display: flex;
+  min-height: 100%;
   background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(25, 250, 231, 0.7679446778711485) 0%, rgba(255, 255, 255, 1) 50%);
 }
 
@@ -12,6 +13,7 @@ mmy-navbar {
   flex-direction: column;
   align-items: center;
   border-left: 4px white solid;
+  width: 100%;
 }
 
 .playlist-name h1 {
@@ -23,7 +25,7 @@ mmy-navbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  width: 100%;
 }
 
 .playlist-name input {
