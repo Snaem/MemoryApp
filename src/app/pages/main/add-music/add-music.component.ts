@@ -36,7 +36,6 @@ export class AddMusicComponent implements OnInit {
       }, (error) => {
         this.matSnack.open('⚠ Une erreur s\'est produite ! Es-tu sûr d\'avoir rentré un lien Youtube valide : https://www.youtube.com/watch?v=XXXX ?', null, {
           duration: 5000,
-          panelClass: 'error-snackbar'
         });
       });
     });
