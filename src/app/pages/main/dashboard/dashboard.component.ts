@@ -11,11 +11,23 @@ export class DashboardComponent implements OnInit {
 
   allMusic: Music[];
 
+  firstFiveMusic: Music[] = [];
+
   constructor(private musicService: MusicService) { }
 
   ngOnInit(): void {
     this.musicService.getAllMusic().subscribe(data => {
       this.allMusic = data;
+      this.allMusic.sort((a, b) => {
+        const miliA = new Date(a.addedAt).getTime();
+        const miliB = new Date(b.addedAt).getTime();
+        return miliA - miliB;
+      });
+      console.log(this.allMusic);
+      for (let i = this.allMusic.length - 1; i > this.allMusic.length - 6; i--) {
+        this.firstFiveMusic.push(this.allMusic[i]);
+      }
+      console.log(this.firstFiveMusic);
     });
   }
 

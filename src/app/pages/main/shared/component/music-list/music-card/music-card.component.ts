@@ -8,11 +8,12 @@ import { Music } from 'src/app/pages/shared/class/music';
 })
 export class MusicCardComponent implements OnInit {
 
-  @Input() allMusic: Music[];
+  @Input() firstFiveMusic: Music[];
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

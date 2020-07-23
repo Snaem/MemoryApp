@@ -1,10 +1,14 @@
 <div class="music-cards">
-  <div class="card" *ngFor="let music of allMusic">
+  <div class="card" *ngFor="let music of firstFiveMusic">
     <div class="thumbnail">
       <img src={{music.thumbnails}}>
     </div>
     <div class="contents">
       <h3>{{music.title}}</h3>
+      <p>Ajouté le : {{music.addedAt | date: 'dd-MM-yyyy'}}</p>
+    </div>
+    <div class="watch">
+      <a href="https://www.youtube.com/watch?v={{music.youtubeVideoId}}" target="_blank">Regarder la vidéo</a>
     </div>
   </div>
 </div>
