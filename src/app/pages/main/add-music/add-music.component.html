@@ -3,9 +3,12 @@
     <mmy-navbar></mmy-navbar>
   </div>
   <div class="add-form">
-    <h1>Ajoute ta musique ici !</h1>
-    <h2>C'est ici que tu vas pouvoir sauvegarder ta petite trouvaille !</h2>
+    <h1>C'est le moment de sauvegarder ta trouvaille !</h1>
+    <h2>C'est ici que tu vas pouvoir sauvegarder tes musiques.</h2>
     <h2>Pour celà, il te suffit juste de copier/coller ton lien Youtube !</h2>
+    <div class="arrow">
+      <img src="assets/down-arrow.png">
+    </div>
     <mmy-add-music-form (sendYoutubeVideoId)="saveVideoData($event)"></mmy-add-music-form>
   </div>
 </div>
