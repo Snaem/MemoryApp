@@ -14,8 +14,8 @@ export class YoutubeService {
 
   constructor(private http: HttpClient) { }
 
-  getYoutubeData(youtubeId: string) {
-    return this.http.get(this.URL + this.path, { params: { youtubeId } });
+  getYoutubeData(youtubeVideoId: string) {
+    return this.http.get(this.URL + this.path, { params: { youtubeVideoId } });
   }
 
 }

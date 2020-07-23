@@ -21,3 +21,16 @@ mmy-add-music-form {
   width: 100%;
   margin-top: 50px;
 }
+
+::ng-deep .mat-snack-bar-container .mat-simple-snackbar {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.error-snackbar {
+  background-color: red;
+  color: white;
+  white-space: pre-wrap;
+}

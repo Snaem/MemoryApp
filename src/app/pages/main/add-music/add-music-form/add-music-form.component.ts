@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -8,18 +8,24 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class AddMusicFormComponent implements OnInit {
 
+  constructor(private fb: FormBuilder) { }
+
   ytbForm = this.fb.group({
     ytbLink: ['', [
       Validators.required
     ]]
   });
 
-  constructor(private fb: FormBuilder) { }
+
+  @Output() sendYoutubeVideoId: EventEmitter<string> = new EventEmitter();
 
   ngOnInit(): void {
   }
 
   onSubmit() {
+    let youtubeVideoId = this.ytbForm.value.ytbLink;
+    youtubeVideoId = youtubeVideoId.split('v=')[1];
 
+    this.sendYoutubeVideoId.emit(youtubeVideoId);
   }
 }
