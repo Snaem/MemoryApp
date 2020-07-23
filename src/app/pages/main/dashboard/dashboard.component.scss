@@ -1,0 +1,24 @@
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.navbar {
+  height: 100%;
+}
+
+.contents {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dashboard-infos {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
