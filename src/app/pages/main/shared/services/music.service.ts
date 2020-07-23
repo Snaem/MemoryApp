@@ -14,7 +14,7 @@ export class MusicService {
 
   constructor(private http: HttpClient) { }
 
-  getAllVideo() {
+  getAllMusic() {
     return this.http.get<Music[]>(this.URL + this.path);
   }
 

@@ -1,0 +1,10 @@
+<div class="music-cards">
+  <div class="card" *ngFor="let music of allMusic">
+    <div class="thumbnail">
+      <img src={{music.thumbnails}}>
+    </div>
+    <div class="contents">
+      <h3>{{music.title}}</h3>
+    </div>
+  </div>
+</div>

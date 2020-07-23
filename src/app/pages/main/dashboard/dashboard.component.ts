@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../auth/shared/services/user.service';
+import { MusicService } from '../shared/services/music.service';
+import { Music } from '../../shared/class/music';
 
 @Component({
   selector: 'mmy-dashboard',
@@ -8,9 +9,14 @@ import { UserService } from '../../auth/shared/services/user.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  allMusic: Music[];
+
+  constructor(private musicService: MusicService) { }
 
   ngOnInit(): void {
+    this.musicService.getAllMusic().subscribe(data => {
+      this.allMusic = data;
+    });
   }
 
 }

@@ -1,0 +1,13 @@
+.music-cards {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  margin-right: 25px;
+}
+
+.thumbnail img {
+  height: 120px;
+  width: 150px;
+}

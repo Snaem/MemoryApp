@@ -13,8 +13,8 @@ import { PlaylistComponent } from './playlist/playlist.component';
 import { CreatePlaylistComponent } from './create-playlist/create-playlist.component';
 import { DetailsPlaylistComponent } from './playlist/details-playlist/details-playlist.component';
 import { NavbarComponent } from './shared/component/navbar/navbar.component';
-import { VideoListComponent } from './shared/component/video-list/video-list.component';
-import { VideoCardComponent } from './shared/component/video-list/video-card/video-card.component';
+import { MusicListComponent } from './shared/component/music-list/music-list.component';
+import { MusicCardComponent } from './shared/component/music-list/music-card/music-card.component';
 
 
 @NgModule({
@@ -27,8 +27,9 @@ import { VideoCardComponent } from './shared/component/video-list/video-card/vid
     CreatePlaylistComponent,
     DetailsPlaylistComponent,
     NavbarComponent,
-    VideoListComponent,
-    VideoCardComponent],
+    MusicListComponent,
+    MusicCardComponent,
+  ],
   imports: [
     CommonModule,
     MainRoutingModule,
