@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { User } from 'src/app/pages/shared/class/user';
 
 @Component({
@@ -10,11 +10,25 @@ import { User } from 'src/app/pages/shared/class/user';
 export class SigninFormComponent implements OnInit {
 
   userForm = this.fb.group({
-    firstname: [''],
-    lastname: [''],
-    email: [''],
-    username: [''],
-    password: ['']
+    firstname: ['', [
+      Validators.required,
+    ]],
+    lastname: ['', [
+      Validators.required,
+    ]],
+    email: ['', [
+      Validators.required,
+      Validators.maxLength(255),
+      Validators.minLength(3),
+      Validators.email
+    ]],
+    username: ['', [
+      Validators.required,
+    ]],
+    password: ['', [
+      Validators.required,
+      Validators.minLength(6)
+    ]]
   });
 
   user: User;
@@ -27,14 +41,15 @@ export class SigninFormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.user = new User(
-      this.userForm.value.username,
-      this.userForm.value.password,
-      this.userForm.value.firstname,
-      this.userForm.value.lastname,
-      this.userForm.value.email);
-
-    this.saveUser.emit(this.user);
+    if (this.userForm.valid) {
+      this.user = new User(
+        this.userForm.value.username,
+        this.userForm.value.password,
+        this.userForm.value.firstname,
+        this.userForm.value.lastname,
+        this.userForm.value.email);
+      this.saveUser.emit(this.user);
+    }
   }
 
 }

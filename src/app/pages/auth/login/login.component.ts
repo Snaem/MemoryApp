@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../shared/services/user.service';
 import { UserLog } from '../../shared/class/userLog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'mmy-login',
@@ -9,17 +10,13 @@ import { UserLog } from '../../shared/class/userLog';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private route: Router) { }
 
   ngOnInit(): void {
   }
 
   logUser(user: UserLog) {
-    console.log(user);
-
-    this.userService.login(user).subscribe((response) => {
-      console.log(response);
-    });
+    this.userService.login(user).subscribe(() => { this.route.navigateByUrl('/dashboard'); });
   }
 
 }

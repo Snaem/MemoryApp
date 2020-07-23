@@ -6,3 +6,13 @@
     <mmy-signin-form (saveUser)="saveUser($event)"></mmy-signin-form>
   </div>
 </div>
+
+<div [ngClass]="emailSend ? 'email-send' : 'email-not-send'">
+  <div class="contents">
+    <div class="title">
+      <h2>Merci pour ton inscription !</h2>
+    </div>
+    <h2>Tu vas reçevoir un mail qui confirme ton inscription !</h2>
+    <h2>Et maintenant, va vite te connecter <b [routerLink]="['']" routerLinkActive="router-link-active">ici</b> !</h2>
+  </div>
+</div>

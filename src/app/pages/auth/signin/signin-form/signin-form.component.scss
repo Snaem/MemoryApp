@@ -1,7 +1,7 @@
 .signin-form {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 6px;
-  height: 400px;
+  height: 550px;
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
@@ -44,10 +44,21 @@
 }
 
 .signin-input {
-  height: 16%;
+  height: 18%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.signin-input span {
+  margin-top: 10px;
+}
+
+.signin-input p {
+  margin: 0;
+  font-size: 1rem;
+  color: red;
 }
 
 ::placeholder {
@@ -57,7 +68,7 @@
 }
 
 .signin-button {
-  height: 16%;
+  height: 10%;
   padding-top: 10px;
   display: flex;
   justify-content: center;
