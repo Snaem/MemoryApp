@@ -10,6 +10,7 @@ export class MusicListComponent implements OnInit {
 
   @Input() musicToDisplay: Music[];
 
+  @Input() isPlaylist = false;
 
   constructor() { }
 

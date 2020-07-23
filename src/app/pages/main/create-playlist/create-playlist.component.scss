@@ -12,15 +12,41 @@ mmy-navbar {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
+}
+
+.playlist-name h1 {
+  color: #2599FB;
 }
 
 .playlist-name form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  ;
+
+}
+
+.playlist-name input {
+  height: 40px;
+  width: 30%;
+  border: none;
+  text-align: center;
+  border-bottom: 2px #2599FB solid;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 1.2rem;
+}
+
+.playlist-name input:focus {
+  outline: none;
+}
+
+::placeholder {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F97332;
 }
 
 .musics {
-  width: 100%;
+  max-width: 100%;
 }

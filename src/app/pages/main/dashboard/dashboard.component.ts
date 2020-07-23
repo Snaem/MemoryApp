@@ -13,6 +13,8 @@ export class DashboardComponent implements OnInit {
 
   firstFiveMusic: Music[] = [];
 
+  isPlaylist = false;
+
   constructor(private musicService: MusicService) { }
 
   ngOnInit(): void {

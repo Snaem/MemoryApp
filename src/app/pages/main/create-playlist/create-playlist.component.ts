@@ -15,7 +15,7 @@ export class CreatePlaylistComponent implements OnInit {
   isPlaylist = true;
 
   playlistForm = this.fb.group({
-    ytbLink: ['', [
+    playlistTitle: ['', [
       Validators.required
     ]]
   });

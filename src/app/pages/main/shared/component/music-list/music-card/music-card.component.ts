@@ -10,9 +10,16 @@ export class MusicCardComponent implements OnInit {
 
   @Input() musicToDisplay: Music[];
 
+  @Input() isPlaylist = false;
+
+  createdPlaylist: Music[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  addMusic(music: Music, i: number) {
+    this.createdPlaylist.push(music);
+  }
 }
