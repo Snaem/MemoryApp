@@ -12,10 +12,10 @@
 
 .contents {
   width: 100%;
-  height: 90%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  border-left: 4px white solid;
 }
 
 .contents h1 {
@@ -24,8 +24,16 @@
 
 .dashboard-infos {
   display: flex;
-  height: 50%;
   width: 100%;
   flex-direction: column;
   align-items: center;
+}
+
+.videos {
+  margin-top: 50px;
+  height: 50%;
+}
+
+.playlist {
+  height: 50%;
 }

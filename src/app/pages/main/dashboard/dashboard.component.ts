@@ -27,7 +27,9 @@ export class DashboardComponent implements OnInit {
       });
       console.log(this.allMusic);
       for (let i = this.allMusic.length - 1; i > this.allMusic.length - 6; i--) {
-        this.firstFiveMusic.push(this.allMusic[i]);
+        if (this.allMusic[i] !== undefined) {
+          this.firstFiveMusic.push(this.allMusic[i]);
+        }
       }
       console.log(this.firstFiveMusic);
     });

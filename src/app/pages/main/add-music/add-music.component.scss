@@ -12,13 +12,13 @@
 
 .add-form {
   width: 100%;
-  height: 100%;
-  margin-bottom: 200px;
+  min-height: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-left: 4px white solid;
 }
 
 .add-form h1 {

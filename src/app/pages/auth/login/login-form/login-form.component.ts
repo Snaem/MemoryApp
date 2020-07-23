@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { User } from 'src/app/pages/shared/class/user';
 import { UserLog } from 'src/app/pages/shared/class/userLog';
 
@@ -11,8 +11,11 @@ import { UserLog } from 'src/app/pages/shared/class/userLog';
 export class LoginFormComponent implements OnInit {
 
   userForm = this.fb.group({
-    username: [''],
-    password: ['']
+    username: ['', [
+      Validators.required]
+    ],
+    password: ['', [
+      Validators.required]]
   });
 
   @Output() logUser: EventEmitter<UserLog> = new EventEmitter();

@@ -1,4 +1,4 @@
-<div class="music-cards">
+<div class="music-cards" *ngIf="musicToDisplay">
   <div class="card" *ngFor="let music of musicToDisplay">
     <div class="thumbnail">
       <img src={{music.thumbnails}}>

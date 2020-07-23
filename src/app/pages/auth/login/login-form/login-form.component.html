@@ -3,13 +3,29 @@
     <h2>Connexion</h2>
   </div>
   <div class="infos">
-    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" #ngForm="ngForm">
       <div class="form-input">
         <input type="text" formControlName="username" placeholder="Username">
+        <ng-container *ngIf="ngForm.submitted && userForm.get('username').invalid">
+          <span *ngIf="userForm.get('username').hasError('required')">
+            <p>Un prénom est requis.</p>
+          </span>
+        </ng-container>
       </div>
+
+
       <div class="form-input">
         <input type="password" formControlName="password" placeholder="Mot de passe">
+        <ng-container *ngIf="ngForm.submitted && userForm.get('password').invalid">
+          <span *ngIf="userForm.get('password').hasError('required')">
+            <p>Un prénom est requis.</p>
+          </span>
+        </ng-container>
       </div>
+
+
       <div class="login-button">
         <button mat-raised-button color="primary">Se connecter</button>
       </div>
