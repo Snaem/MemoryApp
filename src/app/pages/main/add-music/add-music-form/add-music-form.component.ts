@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'mmy-add-music-form',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddMusicFormComponent implements OnInit {
 
-  constructor() { }
+  ytbForm = this.fb.group({
+    ytbLink: ['', [
+      Validators.required
+    ]]
+  });
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
 
+  onSubmit() {
+
+  }
 }
