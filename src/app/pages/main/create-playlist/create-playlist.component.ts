@@ -3,6 +3,8 @@ import { Music } from '../../shared/class/music';
 import { MusicService } from '../shared/services/music.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Playlist } from '../../shared/class/playlist';
+import { PlaylistService } from '../shared/services/playlist.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   // tslint:disable-next-line: component-selector
@@ -26,7 +28,12 @@ export class CreatePlaylistComponent implements OnInit {
     ]]
   });
 
-  constructor(private musicService: MusicService, private fb: FormBuilder) { }
+  constructor(
+    private musicService: MusicService,
+    private fb: FormBuilder,
+    private playlistService: PlaylistService,
+    private matSnack: MatSnackBar
+  ) { }
 
   ngOnInit(): void {
     this.musicService.getAllMusic().subscribe(data => {
@@ -44,6 +51,17 @@ export class CreatePlaylistComponent implements OnInit {
   }
 
   onSubmit() {
-    this.newPlaylist = new Playlist(this.playlistForm.value.playlistTitle, this.playlistToSave);
+    if (this.playlistForm.value.playlistTitle === '') {
+      this.matSnack.open('Tu n\'as pas mis de titre à ta playlist, attention !', null, {
+        duration: 5000,
+      });
+    } else if (!this.playlistToSave) {
+      this.matSnack.open('Tu n\'as pas sélectionné de vidéo !', null, {
+        duration: 5000,
+      });
+    } else {
+      this.newPlaylist = new Playlist(this.playlistForm.value.playlistTitle, this.playlistToSave);
+      this.playlistService.savePlaylist(this.newPlaylist).subscribe();
+    }
   }
 }

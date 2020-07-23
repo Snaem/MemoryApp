@@ -51,3 +51,19 @@ mmy-navbar {
 .musics {
   max-width: 100%;
 }
+
+.save-button button {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  font-size: 1.3rem;
+  width: 250px;
+  height: 60px;
+}
+
+::ng-deep .mat-snack-bar-container .mat-simple-snackbar {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.1rem;
+}
