@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 .navbar {
   height: 100%;
   width: 250px;
-  background-color: #2599FB;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  border-right: 4px white solid;
 }
 
 .title {
@@ -18,14 +20,27 @@
   width: 100%;
 }
 
+.title h1 {
+  margin-bottom: 0;
+  color: #FA7332;
+  font-size: 2.5rem;
+}
+
 .title h2 {
   margin: 0;
   font-size: 2.5rem;
+  color: #FA7332;
+  font-family: 'Dancing Script', cursive;
 }
 
 .title h3 {
   padding-top: 50px;
   font-size: 1.4rem;
+  color: #FA7332;
+}
+
+.title h3 b {
+  color: #259AFA;
 }
 
 .menu {
@@ -51,11 +66,20 @@
   list-style-type: none;
 }
 
+hr {
+  width: 80%;
+  height: 1px;
+  border: none;
+  background-color: #FA7332;
+  margin: 0;
+}
+
 .menu li h3 {
+  font-size: 1.3rem;
   cursor: pointer;
+  color: #259AFA;
 }
 
 .menu li h3:hover {
-  font-size: 1.2rem;
-  color: rgb(194, 194, 194);
+  font-size: 1.4rem;
 }
