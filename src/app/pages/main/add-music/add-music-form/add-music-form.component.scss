@@ -19,6 +19,10 @@ form {
   background-color: rgba(255, 255, 255, 0);
 }
 
+::placeholder {
+  font-size: 1rem;
+}
+
 .link-input span {
   margin-top: 10px;
 }
@@ -31,5 +35,5 @@ form {
 }
 
 .validation-button button {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
