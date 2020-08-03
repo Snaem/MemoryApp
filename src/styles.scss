@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import './theme-material.scss';
+
+@include mat-core();
+
+$lucine-project-primary: mat-palette($mat-custom-primary);
+$lucine-project-accent: mat-palette($mat-custom-secondary);
+
+
+$lucine-project-warn: mat-palette($mat-red);
+
+$lucine-project-theme: mat-light-theme($lucine-project-primary, $lucine-project-accent, $lucine-project-warn);
+
+@include angular-material-theme($lucine-project-theme);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

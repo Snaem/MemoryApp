@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.navbar {
+  max-height: 100%;
+  width: 250px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+}
+
+.title h1 {
+  margin-bottom: 0;
+  color: #FA7332;
+  font-size: 2.5rem;
+}
+
+.title h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #FA7332;
+  font-family: 'Dancing Script', cursive;
+}
+
+.title h3 {
+  padding-top: 50px;
+  font-size: 1.4rem;
+  color: #FA7332;
+}
+
+.title h3 b {
+  color: #259AFA;
+}
+
+.menu {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu ul {
+  height: 100%;
+  padding: 0;
+}
+
+.menu li {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+hr {
+  width: 80%;
+  height: 1px;
+  border: none;
+  background-color: #FA7332;
+  margin: 0;
+}
+
+.menu li h3 {
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #259AFA;
+}
+
+.menu li h3:hover {
+  font-size: 1.4rem;
+}

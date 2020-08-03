@@ -19,7 +19,7 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "mmy",
       "camelCase"
     ],
     "component-selector": [
@@ -95,8 +95,7 @@
       }
     },
     "typedef-whitespace": {
-      "options": [
-        {
+      "options": [{
           "call-signature": "nospace",
           "index-signature": "nospace",
           "parameter": "nospace",

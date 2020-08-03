@@ -1,0 +1,44 @@
+form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.link-input {
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+.link-input input {
+  height: 40px;
+  width: 90%;
+  border: none;
+  border-bottom: 2px #2599FB solid;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 1.2rem;
+}
+
+.link-input input:focus {
+  outline: none;
+}
+
+::placeholder {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F97332;
+}
+
+
+.link-input span p {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: red;
+}
+
+.validation-button button {
+  font-size: 1.5rem;
+}

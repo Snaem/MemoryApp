@@ -1,0 +1,14 @@
+<form [formGroup]="ytbForm" (ngSubmit)="onSubmit()" #ngForm="ngForm">
+  <div class="link-input">
+    <input type="text" formControlName="ytbLink" placeholder="Le lien de ta pépite ici !"
+      onfocus="this.placeholder = ''" onblur="this.placeholder = 'Le lien de ta pépite ici !'">
+    <ng-container *ngIf="ngForm.submitted && ytbForm.get('ytbLink').invalid">
+      <span *ngIf="ytbForm.get('ytbLink').hasError('required')">
+        <p>Un lien Youtube est requis.</p>
+      </span>
+    </ng-container>
+  </div>
+  <div class="validation-button">
+    <button mat-raised-button color="primary">Ajoute ta musique !</button>
+  </div>
+</form>

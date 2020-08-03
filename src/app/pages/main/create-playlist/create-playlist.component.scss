@@ -1,0 +1,71 @@
+.create-playlist {
+  display: flex;
+  min-height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(25, 250, 231, 0.7679446778711485) 0%, rgba(255, 255, 255, 1) 50%);
+}
+
+mmy-navbar {
+  height: 100%;
+}
+
+.playlist-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 4px white solid;
+  width: 100%;
+}
+
+.playlist-name h1 {
+  margin-top: 50px;
+  color: #2599FB;
+}
+
+.playlist-name form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.playlist-name input {
+  height: 40px;
+  width: 30%;
+  border: none;
+  text-align: center;
+  border-bottom: 2px #2599FB solid;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 1.2rem;
+  color: #F97332;
+}
+
+.playlist-name input:focus {
+  outline: none;
+}
+
+::placeholder {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F97332;
+}
+
+.musics {
+  max-width: 100%;
+}
+
+.save-button button {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  font-size: 1.3rem;
+  width: 250px;
+  height: 60px;
+}
+
+::ng-deep .mat-snack-bar-container .mat-simple-snackbar {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.1rem;
+}

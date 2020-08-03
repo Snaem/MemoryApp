@@ -1,0 +1,96 @@
+.signin-form {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 6px;
+  height: 550px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.signin-connexion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  width: 100%;
+}
+
+.signin-connexion h2 {
+  color: #2599FB;
+  font-size: 2rem;
+}
+
+.infos {
+  width: 100%;
+  height: 80%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infos form {
+  height: 100%;
+}
+
+.infos input {
+  height: 30px;
+  width: 90%;
+  border: none;
+  border-bottom: 1px #2599FB solid;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.signin-input {
+  height: 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.signin-input span {
+  margin-top: 10px;
+}
+
+.signin-input p {
+  margin: 0;
+  font-size: 1rem;
+  color: red;
+}
+
+::placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+
+}
+
+.signin-button {
+  height: 10%;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connexion {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connexion h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+
+}
+
+.connexion b {
+  color: #2599FB;
+  font-weight: 600;
+}

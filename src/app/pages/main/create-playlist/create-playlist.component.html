@@ -1,0 +1,24 @@
+<div class="create-playlist">
+  <div class="navbar">
+    <mmy-navbar></mmy-navbar>
+  </div>
+  <div class="playlist-name">
+    <h1>Ici, tu pourras créer facilement ta playlist en sélectionnant les vidéos qui t'intéressent ! </h1>
+    <form [formGroup]="playlistForm" #ngForm="ngForm">
+      <input type="text" formControlName="playlistTitle" placeholder="Nom de ta playlist ici"
+        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nom de ta playlist ici'">
+      <ng-container *ngIf="ngForm.submitted && playlistForm.get('playlistTitle').invalid">
+        <span *ngIf="playlistForm.get('playlistTitle').hasError('required')">
+          <p>Un titre de playlist est requis.</p>
+        </span>
+      </ng-container>
+      <div class="musics">
+        <mmy-music-list [musicToDisplay]="allMusic" [isPlaylist]="true" (musicPlaylistToSave)="savePlaylist($event)">
+        </mmy-music-list>
+      </div>
+      <div class="save-button">
+        <button mat-raised-button (click)="onSubmit()" color="primary">Sauvegarder la playlist</button>
+      </div>
+    </form>
+  </div>
+</div>
