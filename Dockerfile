@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 COPY package.json ./
 RUN npm install
 COPY . .
-RUN npm run build --prod
+RUN ng build --prod
 
 # production environment
 FROM nginx:1.13.9-alpine
