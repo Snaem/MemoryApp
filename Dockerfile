@@ -1,11 +1,11 @@
 # build environment
-FROM node:12.13.0 as builder
+FROM node:14.5.0 as builder
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 COPY package.json ./
 RUN npm install
 COPY . .
-RUN npm run build:opti --prod
+RUN npm run build --prod
 
 # production environment
 FROM nginx:1.13.9-alpine
