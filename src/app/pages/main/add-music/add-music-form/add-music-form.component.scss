@@ -16,7 +16,7 @@ form {
   height: 40px;
   width: 90%;
   border: none;
-  border-bottom: 2px #2599FB solid;
+  border-bottom: 2px var(--primary-color) solid;
   background-color: rgba(255, 255, 255, 0);
   font-size: 1.2rem;
 }
@@ -28,7 +28,7 @@ form {
 ::placeholder {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #F97332;
+  color: var(--secondary-color);
 }
 
 

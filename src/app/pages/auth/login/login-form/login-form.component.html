@@ -10,7 +10,7 @@
         <input type="text" formControlName="username" placeholder="Username">
         <ng-container *ngIf="ngForm.submitted && userForm.get('username').invalid">
           <span *ngIf="userForm.get('username').hasError('required')">
-            <p>Un prénom est requis.</p>
+            <p>Un username est requis !</p>
           </span>
         </ng-container>
       </div>
@@ -20,7 +20,7 @@
         <input type="password" formControlName="password" placeholder="Mot de passe">
         <ng-container *ngIf="ngForm.submitted && userForm.get('password').invalid">
           <span *ngIf="userForm.get('password').hasError('required')">
-            <p>Un prénom est requis.</p>
+            <p>Le mot de passe est manquant !</p>
           </span>
         </ng-container>
       </div>
@@ -32,6 +32,6 @@
     </form>
   </div>
   <div class="sign-button">
-    <h3 [routerLink]="['/sign-in']">Pas de compte ? <b>S'inscrire ici !</b></h3>
+    <h3>Pas de compte ? <b [routerLink]="['/sign-in']">S'inscrire ici !</b></h3>
   </div>
 </div>
