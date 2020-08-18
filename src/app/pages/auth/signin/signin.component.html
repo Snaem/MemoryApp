@@ -1,18 +1,17 @@
 <div class="signin-page">
   <div class="signin-title">
-    <h1>Formulaire d'inscription</h1>
+    <h1>C'est ici qu'on <b>s'inscrit !</b></h1>
   </div>
   <div class="signin-form">
     <mmy-signin-form (saveUser)="saveUser($event)"></mmy-signin-form>
   </div>
-</div>
-
-<div [ngClass]="emailSend ? 'email-send' : 'email-not-send'">
-  <div class="contents">
-    <div class="title">
-      <h2>Merci pour ton inscription !</h2>
+  <div class="popup">
+    <div [ngClass]="emailSend ? 'email-send' : 'email-not-send'">
+      <div class="confirm-message">
+        <h2>Merci pour ton inscription !</h2>
+        <h3>Tu vas reçevoir un mail qui confirme ton inscription. Tu peux dès maintenant te connecter <b
+            [routerLink]="['']" routerLinkActive="router-link-active">ici !</b></h3>
+      </div>
     </div>
-    <h2>Tu vas reçevoir un mail qui confirme ton inscription !</h2>
-    <h2>Et maintenant, va vite te connecter <b [routerLink]="['']" routerLinkActive="router-link-active">ici</b> !</h2>
   </div>
 </div>
