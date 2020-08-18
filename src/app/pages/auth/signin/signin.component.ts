@@ -11,15 +11,12 @@ export class SigninComponent implements OnInit {
 
   emailSend = false;
 
-
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
   }
 
   saveUser(user: User) {
-    console.log(user);
-
     this.userService.saveUser(user).subscribe();
     this.emailSend = true;
   }
