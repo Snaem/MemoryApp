@@ -3,7 +3,8 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor
+  HttpInterceptor,
+  HttpHeaders
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { UserService } from '../auth/shared/services/user.service';
@@ -12,13 +13,16 @@ import { UserService } from '../auth/shared/services/user.service';
 export class TokenInterceptor implements HttpInterceptor {
   constructor(private userService: UserService) { }
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    if (localStorage.getItem('userToken')) {
+    if (localStorage.getItem('token')) {
       const userToken = this.userService.getToken();
       const modifiedReq = req.clone({
-        headers: req.headers.set('Authorization', `Bearer ${userToken}`),
+        headers: new HttpHeaders({ Authorization: userToken })
       });
+
+      console.log('Intercepted HTTP call', modifiedReq);
       return next.handle(modifiedReq);
+    } else {
+      return next.handle(req);
     }
-    return next.handle(req);
   }
 }
