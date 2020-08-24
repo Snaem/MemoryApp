@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MusicService } from '../shared/services/music.service';
 import { Music } from '../../shared/class/music';
+import { UserService } from '../../auth/shared/services/user.service';
 
 @Component({
   selector: 'mmy-dashboard',
@@ -18,6 +19,7 @@ export class DashboardComponent implements OnInit {
   constructor(private musicService: MusicService) { }
 
   ngOnInit(): void {
+
     this.musicService.getAllMusic().subscribe(data => {
       this.allMusic = data;
       this.allMusic.sort((a, b) => {
@@ -31,8 +33,6 @@ export class DashboardComponent implements OnInit {
           this.firstFiveMusic.push(this.allMusic[i]);
         }
       }
-      console.log(this.firstFiveMusic);
     });
   }
-
 }

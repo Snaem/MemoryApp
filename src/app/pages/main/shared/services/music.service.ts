@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Music } from 'src/app/pages/shared/class/music';
+import { UserService } from 'src/app/pages/auth/shared/services/user.service';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,7 @@ export class MusicService {
   }
 
   saveMusic(music: Music) {
-    return this.http.post<Music>(this.URL + this.path, music, { observe: 'response' });
+    return this.http.post<Music>(this.URL + this.path, music);
   }
 
   updateMusic(music: Music, youtubeVideoId: string) {
