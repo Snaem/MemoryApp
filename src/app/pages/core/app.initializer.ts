@@ -14,6 +14,8 @@ export function initApp(userService: UserService, route: Router) {
             resolve();
           }
         });
+      } else {
+        resolve();
       }
     });
   };
