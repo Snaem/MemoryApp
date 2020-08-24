@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { User } from 'src/app/pages/shared/class/user';
+import { AuthUser } from 'src/app/pages/shared/class/authUser';
 import { tap } from 'rxjs/operators';
 import { UserLog } from 'src/app/pages/shared/class/userLog';
 import { Observable } from 'rxjs';
@@ -11,7 +12,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  currentUser: User;
+  currentUser: AuthUser;
 
   path = '/users';
 
@@ -19,7 +20,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  setUser(user) {
+  setUser(user: AuthUser) {
     this.currentUser = user;
   }
 
@@ -30,12 +31,12 @@ export class UserService {
   login(user: UserLog) {
     return this.http.post(this.URL + '/login', user, { observe: 'response' }).pipe(tap((response) => {
       const token = response.headers.get('Authorization');
-      window.localStorage.setItem(token, token);
+      window.localStorage.setItem('token', token);
     }));
   }
 
-  getMe(): Observable<User> {
-    return this.http.get<User>(this.URL + this.path + '/me').pipe(tap((user) => this.setUser(user)));
+  getMe(): Observable<AuthUser> {
+    return this.http.get<AuthUser>(this.URL + this.path + '/me');
   }
 
   saveUser(user: User) {

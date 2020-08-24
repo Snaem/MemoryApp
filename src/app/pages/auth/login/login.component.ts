@@ -16,7 +16,9 @@ export class LoginComponent implements OnInit {
   }
 
   logUser(user: UserLog) {
-    this.userService.login(user).subscribe(() => { this.route.navigateByUrl('/dashboard'); });
+    this.userService.login(user).subscribe(() => {
+      this.userService.getMe().subscribe();
+      this.route.navigateByUrl('/dashboard');
+    });
   }
-
 }
