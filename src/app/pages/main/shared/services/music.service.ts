@@ -19,7 +19,7 @@ export class MusicService {
     return this.http.get<Music[]>(this.URL + this.path);
   }
 
-  saveMusic(music: Music, userId: string) {
+  saveMusic(music: Music) {
     return this.http.post<Music>(this.URL + this.path, music);
   }
 
