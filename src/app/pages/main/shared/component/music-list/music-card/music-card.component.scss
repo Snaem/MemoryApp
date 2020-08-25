@@ -2,53 +2,85 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center
 }
 
 .card {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 6px;
-  height: 300px;
+  height: 350px;
   width: 250px;
   margin: 25px 10px 0px 10px;
 }
 
 .thumbnail {
-  height: 50%;
+  position: relative;
+  height: 225px;
+  width: 255px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
 }
 
 .thumbnail img {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  border-radius: 6px;
   height: 100%;
   width: 100%;
+}
+
+.play-logo {
+  margin: 0;
+  width: fit-content;
+  position: absolute;
+  bottom: auto;
+  top: 80%;
+  left: 2%;
+}
+
+.play-button {
+  border: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.play-button img {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  padding-left: 5px;
 }
 
 .contents {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   height: 35%;
 }
 
-.contents h3 {
+.title {
+  display: flex;
+}
+
+.title h3 {
+  font-size: 1rem;
   margin: 0;
   color: #259AFA;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
-.watch {
-  display: flex;
-  justify-content: center;
-  height: 10%;
+.added {
+  margin-top: 10px;
 }
 
-.watch a {
-  color: #FA7332;
-  text-decoration: none;
-  font-weight: 500;
+.added p {
+  margin: 0;
+  font-size: 0.9rem;
 }
 
 .add-music-playlist {
