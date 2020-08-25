@@ -19,7 +19,6 @@ export class TokenInterceptor implements HttpInterceptor {
         headers: new HttpHeaders({ Authorization: userToken })
       });
 
-      console.log('Intercepted HTTP call', modifiedReq);
       return next.handle(modifiedReq);
     } else {
       return next.handle(req);
