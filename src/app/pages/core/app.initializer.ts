@@ -10,7 +10,7 @@ export function initApp(userService: UserService, route: Router) {
         userService.getMe().subscribe(user => {
           userService.currentUser = new AuthUser(user.id, user.username, user.musics);
           if (route.url === '/') {
-            route.navigateByUrl('/dashboard');
+            route.navigateByUrl('/acceuil');
             resolve();
           }
         });

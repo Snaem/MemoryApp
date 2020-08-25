@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     this.userService.login(user).subscribe(() => {
       this.userService.getMe().subscribe(userLogged => {
         this.userService.currentUser = new AuthUser(userLogged.id, userLogged.username, userLogged.musics);
-        this.route.navigateByUrl('/dashboard');
+        this.route.navigateByUrl('/acceuil');
       });
     });
   }
