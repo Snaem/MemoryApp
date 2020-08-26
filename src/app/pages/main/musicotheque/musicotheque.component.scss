@@ -1,0 +1,32 @@
+.musicotheque {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar {
+  height: 100%;
+}
+
+.musics {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.title h1 {
+  margin: 0;
+  color: var(--secondary-color);
+  padding-left: 50px;
+  font-size: 2rem;
+}
+
+.all-music {
+  min-height: 90%;
+}

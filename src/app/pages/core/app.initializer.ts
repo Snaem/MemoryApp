@@ -9,8 +9,10 @@ export function initApp(userService: UserService, route: Router) {
       if (localStorage.getItem('token')) {
         userService.getMe().subscribe(user => {
           userService.currentUser = new AuthUser(user.id, user.username, user.musics);
-          if (route.url === '/') {
-            route.navigateByUrl('/dashboard');
+          if (window.location.pathname === '/' || window.location.pathname === '/sign-in') {
+            route.navigateByUrl('/acceuil');
+            resolve();
+          } else {
             resolve();
           }
         });

@@ -27,7 +27,7 @@ export class AddMusicComponent implements OnInit {
       this.videoData = data;
       this.musicToSave = null;
       for (const item of this.videoData.items) {
-        this.musicToSave = new Music(item.snippet.title, item.snippet.thumbnails.medium.url, youtubeVideoId, new Date());
+        this.musicToSave = new Music(item.snippet.title, item.snippet.thumbnails.maxres.url, youtubeVideoId, new Date());
       }
       this.musicService.saveMusic(this.musicToSave).subscribe(res => {
         this.matSnack.open('C\'est bon, ta vidéo a bien été enregistrée !', null, {

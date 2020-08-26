@@ -9,9 +9,13 @@ import { Music } from 'src/app/pages/shared/class/music';
 })
 export class MusicListComponent implements OnInit {
 
+  constructor() { }
+
   @Input() musicToDisplay: Music[];
 
   @Input() isPlaylist = false;
+
+  @Input() isMusicotheque = false;
 
   open = true;
 
@@ -19,7 +23,8 @@ export class MusicListComponent implements OnInit {
 
   @Output() musicPlaylistToSave: EventEmitter<Music[]> = new EventEmitter();
 
-  constructor() { }
+  @Output() deleteMusic: EventEmitter<Music> = new EventEmitter();
+
 
   ngOnInit(): void {
   }
@@ -33,7 +38,11 @@ export class MusicListComponent implements OnInit {
     this.musicPlaylistToSave.emit(this.musicsResume);
   }
 
-  deleteMusic(i: number) {
+  deleteMusicPlaylist(i: number) {
     this.musicsResume.splice(i, 1);
+  }
+
+  musicToDelete(music: Music) {
+    this.deleteMusic.emit(music);
   }
 }

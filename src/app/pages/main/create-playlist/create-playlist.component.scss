@@ -7,8 +7,14 @@ mmy-navbar {
   height: 100%;
 }
 
-.playlist-name {
+.titre {
   display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.playlist-name {
+  display: none;
   flex-direction: column;
   align-items: center;
   border-left: 4px white solid;

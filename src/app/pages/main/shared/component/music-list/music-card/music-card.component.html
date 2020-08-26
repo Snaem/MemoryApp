@@ -1,17 +1,27 @@
 <div class="music-cards" *ngIf="musicToDisplay">
   <div class="card" *ngFor="let music of musicToDisplay">
     <div class="thumbnail">
-      <img src={{music.thumbnails}}>
+      <div class="image">
+        <img src={{music.thumbnails}}>
+      </div>
+      <div class="play-logo">
+        <a href="https://www.youtube.com/watch?v={{music.youtubeVideoId}}" target="_blank" class="play-button"><img
+            src="assets/triangular.svg"></a>
+      </div>
     </div>
     <div class="contents">
-      <h3>{{music.title}}</h3>
-      <p>Ajouté le : {{music.addedAt | date: 'dd-MM-yyyy'}}</p>
-    </div>
-    <div class="watch" *ngIf="!isPlaylist">
-      <a href="https://www.youtube.com/watch?v={{music.youtubeVideoId}}" target="_blank">Regarder la vidéo</a>
-    </div>
-    <div class="add-music-playlist" *ngIf="isPlaylist">
-      <button mat-raised-button (click)="addMusic(music)">Ajoutez</button>
+      <div class="title">
+        <h3>{{music.title}}</h3>
+      </div>
+      <div class="added">
+        <p>Ajouté le : {{music.addedAt | date: 'dd-MM-yyyy'}}</p>
+      </div>
+      <div class="delete-musique" *ngIf="isMusicotheque">
+        <p (click)="deleteMusic(music)">Supprimer</p>
+      </div>
+      <div class="add-music-playlist" *ngIf="isPlaylist">
+        <button mat-raised-button (click)="addMusic(music)">Ajoutez</button>
+      </div>
     </div>
   </div>
 </div>

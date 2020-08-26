@@ -33,7 +33,7 @@ export class Localized {
 }
 export class Thumbnails {
 
-  constructor(public defaut: Default, public medium: Medium, public high: High, public standard: Standard) { }
+  constructor(public defaut: Default, public medium: Medium, public high: High, public standard: Standard, public maxres: MaxRes) { }
 
 }
 
@@ -54,6 +54,10 @@ export class High {
 }
 
 export class Standard {
+  constructor(public url: string, public width: number, public weight: number) { }
+}
+
+export class MaxRes {
   constructor(public url: string, public width: number, public weight: number) { }
 }
 

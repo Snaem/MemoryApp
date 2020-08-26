@@ -1,5 +1,8 @@
-<mmy-music-card [musicToDisplay]="musicToDisplay" [isPlaylist]="isPlaylist" (playlistToSave)="playlistToSave($event)">
-</mmy-music-card>
+<div class="all-music">
+  <mmy-music-card [musicToDisplay]="musicToDisplay" [isPlaylist]="isPlaylist" (playlistToSave)="playlistToSave($event)"
+    [isMusicotheque]="isMusicotheque" (musicToDelete)="musicToDelete($event)">
+  </mmy-music-card>
+</div>
 <div class="resume" *ngIf="musicsResume">
   <div class="close-button">
     <h2>Résumé de la playlist</h2>
@@ -8,7 +11,7 @@
   </div>
   <div class="actual-playlist" *ngIf="open">
     <div class="music-playlist" *ngFor="let music of musicsResume; let i = index">
-      <p>{{music.title}}<img (click)="deleteMusic(i)" src="assets/close.png"></p>
+      <p>{{music.title}}<img (click)="deleteMusicPlaylist(i)" src="assets/close.png"></p>
     </div>
   </div>
 </div>

@@ -15,6 +15,7 @@ import { DetailsPlaylistComponent } from './playlist/details-playlist/details-pl
 import { NavbarComponent } from './shared/component/navbar/navbar.component';
 import { MusicListComponent } from './shared/component/music-list/music-list.component';
 import { MusicCardComponent } from './shared/component/music-list/music-card/music-card.component';
+import { MusicothequeComponent } from './musicotheque/musicotheque.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { MusicCardComponent } from './shared/component/music-list/music-card/mus
     NavbarComponent,
     MusicListComponent,
     MusicCardComponent,
+    MusicothequeComponent,
   ],
   imports: [
     CommonModule,

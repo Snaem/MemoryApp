@@ -1,0 +1,15 @@
+<div class="musicotheque">
+  <div class="navbar">
+    <mmy-navbar></mmy-navbar>
+  </div>
+  <div class="musics">
+    <div class="title">
+      <h1>Musiques ajoutées</h1>
+    </div>
+    <div class="all-music">
+      <mmy-music-list [musicToDisplay]="allMusic" [isPlaylist]="false" [isMusicotheque]="true"
+        (deleteMusic)="deleteMusic($event)">
+      </mmy-music-list>
+    </div>
+  </div>
+</div>

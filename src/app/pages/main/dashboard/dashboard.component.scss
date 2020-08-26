@@ -14,13 +14,15 @@
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  border-left: 4px white solid;
 }
 
 .contents h1 {
-  color: #FA7332;
+  font-size: 1.8rem;
+  margin: 0;
+  padding-left: 10%;
+  color: var(--secondary-color);
+  align-self: flex-start;
 }
-
 
 .videos {
   display: flex;
