@@ -1,5 +1,8 @@
-<mmy-music-card [musicToDisplay]="musicToDisplay" [isPlaylist]="isPlaylist" (playlistToSave)="playlistToSave($event)">
-</mmy-music-card>
+<div class="all-music">
+  <mmy-music-card [musicToDisplay]="musicToDisplay" [isPlaylist]="isPlaylist" (playlistToSave)="playlistToSave($event)"
+    [isMusicotheque]="isMusicotheque">
+  </mmy-music-card>
+</div>
 <div class="resume" *ngIf="musicsResume">
   <div class="close-button">
     <h2>Résumé de la playlist</h2>

@@ -3,7 +3,12 @@
     <mmy-navbar></mmy-navbar>
   </div>
   <div class="musics">
-    <mmy-music-list [musicToDisplay]="allMusic" [isPlaylist]="false">
-    </mmy-music-list>
+    <div class="title">
+      <h1>Musiques ajoutées</h1>
+    </div>
+    <div class="all-music">
+      <mmy-music-list [musicToDisplay]="allMusic" [isPlaylist]="false" [isMusicotheque]="true">
+      </mmy-music-list>
+    </div>
   </div>
 </div>

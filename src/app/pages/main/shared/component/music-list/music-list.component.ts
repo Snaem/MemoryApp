@@ -13,6 +13,8 @@ export class MusicListComponent implements OnInit {
 
   @Input() isPlaylist = false;
 
+  @Input() isMusicotheque = false;
+
   open = true;
 
   musicsResume: Music[];
