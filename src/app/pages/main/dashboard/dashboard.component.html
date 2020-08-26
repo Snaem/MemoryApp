@@ -5,7 +5,11 @@
   <div class="contents">
     <div class="videos">
       <h1>Tes dernières nouveautés :</h1>
-      <div class="list-video">
+      <div class="no-music" *ngIf="firstFiveMusic.length === 0">
+        <h2>Tu n'as pas encore ajouté de musique ! N'hésite pas à le faire <b [routerLink]="['/ajout-musique']">ici</b>
+        </h2>
+      </div>
+      <div class="list-video" *ngIf="firstFiveMusic">
         <mmy-music-list [musicToDisplay]="firstFiveMusic"></mmy-music-list>
       </div>
     </div>
