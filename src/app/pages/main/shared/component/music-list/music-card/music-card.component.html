@@ -16,9 +16,12 @@
       <div class="added">
         <p>Ajouté le : {{music.addedAt | date: 'dd-MM-yyyy'}}</p>
       </div>
-    </div>
-    <div class="add-music-playlist" *ngIf="isPlaylist">
-      <button mat-raised-button (click)="addMusic(music)">Ajoutez</button>
+      <div class="delete-musique" *ngIf="isMusicotheque">
+        <p (click)="deleteMusic(music)">Supprimer</p>
+      </div>
+      <div class="add-music-playlist" *ngIf="isPlaylist">
+        <button mat-raised-button (click)="addMusic(music)">Ajoutez</button>
+      </div>
     </div>
   </div>
 </div>

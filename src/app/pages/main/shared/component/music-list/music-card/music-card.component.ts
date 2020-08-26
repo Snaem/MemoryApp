@@ -13,9 +13,13 @@ export class MusicCardComponent implements OnInit {
 
   @Input() isPlaylist = false;
 
+  @Input() isMusicotheque = false;
+
   createdPlaylist: Music[] = [];
 
   @Output() playlistToSave: EventEmitter<Music[]> = new EventEmitter();
+
+  @Output() musicToDelete: EventEmitter<Music> = new EventEmitter();
 
   constructor() { }
 
@@ -25,6 +29,9 @@ export class MusicCardComponent implements OnInit {
   addMusic(music: Music) {
     this.createdPlaylist.push(music);
     this.playlistToSave.emit(this.createdPlaylist);
-    console.log(this.createdPlaylist);
+  }
+
+  deleteMusic(music: Music) {
+    this.musicToDelete.emit(music);
   }
 }

@@ -7,7 +7,8 @@
       <h1>Musiques ajoutées</h1>
     </div>
     <div class="all-music">
-      <mmy-music-list [musicToDisplay]="allMusic" [isPlaylist]="false" [isMusicotheque]="true">
+      <mmy-music-list [musicToDisplay]="allMusic" [isPlaylist]="false" [isMusicotheque]="true"
+        (deleteMusic)="deleteMusic($event)">
       </mmy-music-list>
     </div>
   </div>
