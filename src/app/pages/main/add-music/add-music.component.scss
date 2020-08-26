@@ -23,12 +23,13 @@
 .add-form h1 {
   font-size: 3rem;
   font-weight: 500;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .add-form h2 {
   margin-bottom: 0;
-  color: #259AFA;
+  font-weight: 500;
+  color: var(--secondary-color);
 }
 
 .add-form h3 {

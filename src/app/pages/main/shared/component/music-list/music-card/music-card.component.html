@@ -14,7 +14,7 @@
         <h3>{{music.title}}</h3>
       </div>
       <div class="added">
-        <p>Ajouté le : {{music.addedAt | date: 'dd-MM-yyyy'}}</p>
+        <p>Ajouté le : {{music.addedAt | date: 'dd/MM/yyyy'}}</p>
       </div>
       <div class="delete-musique" *ngIf="isMusicotheque">
         <p (click)="deleteMusic(music)">Supprimer</p>

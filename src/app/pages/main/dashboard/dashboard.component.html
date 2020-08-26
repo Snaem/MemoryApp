@@ -7,6 +7,7 @@
       <h1>Tes dernières nouveautés :</h1>
       <div class="no-music" *ngIf="firstFiveMusic.length === 0">
         <h2>Tu n'as pas encore ajouté de musique ! N'hésite pas à le faire <b [routerLink]="['/ajout-musique']">ici</b>
+          !
         </h2>
       </div>
       <div class="list-video" *ngIf="firstFiveMusic">
@@ -14,7 +15,7 @@
       </div>
     </div>
     <div class="playlist">
-      <h1>Tes dernières playlists</h1>
+      <h1>Tes dernières playlists :</h1>
       <div class="list-playlist">
         <mmy-playlist></mmy-playlist>
       </div>

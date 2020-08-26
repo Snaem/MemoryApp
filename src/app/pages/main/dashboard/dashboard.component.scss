@@ -20,7 +20,7 @@
   font-size: 1.8rem;
   margin: 0;
   padding-left: 10%;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   align-self: flex-start;
 }
 
@@ -41,13 +41,18 @@
   height: 100%;
 }
 
+.no-music h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 .no-music b {
   color: var(--primary-color);
   cursor: pointer;
 }
 
 .playlist {
-  display: flex;
+  display: none;
   width: 100%;
   flex-direction: column;
   align-items: center;

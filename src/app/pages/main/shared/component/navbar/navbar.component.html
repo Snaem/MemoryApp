@@ -1,5 +1,6 @@
 <div class="navbar">
   <div class="title">
+    <img src="assets/headphones.png">
     <h1>Memory</h1>
     <h2>Musics</h2>
     <h3>Bienvenue <b>{{currentUser.username}}</b></h3>
@@ -7,15 +8,24 @@
   <div class="menu">
     <ul>
       <li>
-        <h3 [routerLink]="['/acceuil']">Acceuil</h3>
-        <hr>
-        <h3 [routerLink]="['/ajout-musique']">Ajouter une musique</h3>
-        <hr>
-        <h3 [routerLink]="['/ma-musicothèque']">Musicothèque</h3>
-        <hr>
-        <h3 [routerLink]="['/creation-playlist']">Créer une playlist</h3>
-        <hr>
-        <h3 (click)="logout()">Déconnexion</h3>
+        <h3 [routerLink]="['/acceuil']">Acceuil
+          <hr>
+        </h3>
+
+        <h3 [routerLink]="['/ajout-musique']">Ajouter une musique
+          <hr>
+        </h3>
+        <h3 [routerLink]="['/ma-musicothèque']">Musicothèque
+          <hr>
+        </h3>
+
+        <h3 [routerLink]="['/creation-playlist']">Créer une playlist
+          <hr>
+        </h3>
+
+        <h3 (click)="logout()">Déconnexion
+          <hr>
+        </h3>
       </li>
     </ul>
   </div>
