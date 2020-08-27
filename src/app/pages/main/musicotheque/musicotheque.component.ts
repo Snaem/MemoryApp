@@ -37,6 +37,6 @@ export class MusicothequeComponent implements OnInit {
         duration: 5000,
       });
     });
-
   }
+
 }

@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
+
 import { AppComponent } from './app.component';
 import { LoaderComponent } from './pages/shared/component/loader/loader.component';
 import { LoaderInterceptor } from './pages/core/loader.interceptor';

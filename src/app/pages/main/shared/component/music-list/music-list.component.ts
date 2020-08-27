@@ -21,12 +21,17 @@ export class MusicListComponent implements OnInit {
 
   musicsResume: Music[];
 
+  searchedMusic: Music[];
+
+  searchValue: string;
+
   @Output() musicPlaylistToSave: EventEmitter<Music[]> = new EventEmitter();
 
   @Output() deleteMusic: EventEmitter<Music> = new EventEmitter();
 
 
   ngOnInit(): void {
+    this.searchedMusic = [...this.musicToDisplay];
   }
 
   openCloseResume() {
@@ -44,5 +49,10 @@ export class MusicListComponent implements OnInit {
 
   musicToDelete(music: Music) {
     this.deleteMusic.emit(music);
+  }
+
+  musicFilter() {
+    const filter = this.searchValue;
+    this.searchedMusic = this.musicToDisplay.filter((music) => music.title.toLowerCase().indexOf(filter.toLowerCase()) > -1);
   }
 }
