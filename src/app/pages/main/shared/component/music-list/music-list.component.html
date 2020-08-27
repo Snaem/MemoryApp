@@ -1,5 +1,5 @@
 <div class="all-music">
-  <div class="search-bar">
+  <div class="search-bar" *ngIf="!isDashboard">
     <div class="search-logo">
       <img src="/assets/search.png">
     </div>
@@ -11,7 +11,7 @@
       </button>
     </mat-form-field>
   </div>
-  <mmy-music-card [musicToDisplay]="searchedMusic" [isPlaylist]="isPlaylist" (playlistToSave)="playlistToSave($event)"
+  <mmy-music-card [musicToDisplay]="musicToDisplay" [isPlaylist]="isPlaylist" (playlistToSave)="playlistToSave($event)"
     [isMusicotheque]="isMusicotheque" (musicToDelete)="musicToDelete($event)">
   </mmy-music-card>
 </div>

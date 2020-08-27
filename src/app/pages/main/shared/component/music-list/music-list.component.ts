@@ -2,7 +2,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Music } from 'src/app/pages/shared/class/music';
 
 @Component({
-  // tslint:disable-next-line: component-selector
   selector: 'mmy-music-list',
   templateUrl: './music-list.component.html',
   styleUrls: ['./music-list.component.scss']
@@ -16,6 +15,8 @@ export class MusicListComponent implements OnInit {
   @Input() isPlaylist = false;
 
   @Input() isMusicotheque = false;
+
+  @Input() isDashboard = false;
 
   open = true;
 
@@ -53,6 +54,6 @@ export class MusicListComponent implements OnInit {
 
   musicFilter() {
     const filter = this.searchValue;
-    this.searchedMusic = this.musicToDisplay.filter((music) => music.title.toLowerCase().indexOf(filter.toLowerCase()) > -1);
+    this.musicToDisplay = this.searchedMusic.filter((music) => music.title.toLowerCase().indexOf(filter.toLowerCase()) > -1);
   }
 }
