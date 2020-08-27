@@ -90,6 +90,7 @@ hr {
   flex-direction: column;
   align-items: center;
   outline: none;
+  margin: 10px 0px 10px 0px;
 }
 
 .menu li h3 hr {
@@ -103,7 +104,7 @@ hr {
 }
 
 .menu li h3:hover hr {
-  animation: underline 1.2s;
+  animation: underline 1s;
   animation-fill-mode: forwards;
 }
 
