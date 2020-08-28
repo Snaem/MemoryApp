@@ -17,9 +17,6 @@ export class SigninComponent implements OnInit {
   }
 
   saveUser(user: User) {
-    this.userService.saveUser(user).subscribe();
-    this.emailSend = true;
+    this.userService.saveUser(user).subscribe(() => this.emailSend = true);
   }
-
-
 }

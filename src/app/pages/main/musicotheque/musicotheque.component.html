@@ -2,11 +2,16 @@
   <div class="navbar">
     <mmy-navbar></mmy-navbar>
   </div>
-  <div class="musics">
+  <div class="musics" *ngIf="allMusic">
     <div class="title">
-      <h1>Musiques ajoutées</h1>
+      <h1>Musiques ajoutées :</h1>
     </div>
-    <div class="all-music">
+    <div class="no-music" *ngIf="allMusic.length === 0">
+      <h2>Tu n'as pas encore ajouté de musique ! N'hésite pas à le faire <b [routerLink]="['/ajout-musique']">ici</b>
+        !
+      </h2>
+    </div>
+    <div class="all-music" *ngIf="allMusic">
       <mmy-music-list [musicToDisplay]="allMusic" [isPlaylist]="false" [isMusicotheque]="true"
         (deleteMusic)="deleteMusic($event)">
       </mmy-music-list>

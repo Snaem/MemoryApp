@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
@@ -38,7 +41,10 @@ import { MusicothequeComponent } from './musicotheque/musicotheque.component';
     ReactiveFormsModule,
     FormsModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule
   ]
 })
 export class MainModule { }
