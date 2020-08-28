@@ -7,6 +7,7 @@
 
 .navbar {
   height: 100%;
+  display: flex;
 }
 
 .contents {
@@ -58,3 +59,28 @@
   align-items: center;
   height: 50%;
 }
+
+
+@media screen and (min-width: 1921px) {}
+
+@media screen and (max-width: 1024px) {
+  .dashboard {
+    justify-content: flex-end;
+  }
+
+  .navbar {
+    height: 100%;
+  }
+
+  .contents {
+    width: 95%;
+  }
+
+
+}
+
+@media screen and (max-width: 1024px) and (max-height: 768px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 480px) {}
