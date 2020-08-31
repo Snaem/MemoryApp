@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  Url: 'http://localhost:8080'
+  Url: 'https://memory-api.caprover.clementcheradame.fr'
 };
 
 /*
