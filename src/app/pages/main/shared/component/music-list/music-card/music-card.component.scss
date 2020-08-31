@@ -1,6 +1,12 @@
 .music-cards {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+}
+
+.dashboard-music-cards {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -116,12 +122,17 @@
 @media screen and (min-width: 1921px) {}
 
 @media screen and (max-width: 1024px) {
-  .music-cards {
+  .dashboard-music-cards {
     justify-content: flex-start;
     flex-wrap: nowrap;
     width: 900px;
     height: 400px;
+    overflow-x: auto;
+  }
+
+  .music-cards {
     overflow-y: auto;
+    height: 1200px;
   }
 }
 

@@ -13,6 +13,8 @@ export class MusicCardComponent implements OnInit {
 
   @Input() isPlaylist = false;
 
+  @Input() isDashboard = false;
+
   @Input() isMusicotheque = false;
 
   createdPlaylist: Music[] = [];

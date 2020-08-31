@@ -1,4 +1,4 @@
-<div class="music-cards" *ngIf="musicToDisplay">
+<div id="music-cards" [ngClass]="isDashboard ? 'dashboard-music-cards' : 'music-cards'" *ngIf=" musicToDisplay">
   <div class="card" *ngFor="let music of musicToDisplay">
     <div class="thumbnail">
       <div class="image">

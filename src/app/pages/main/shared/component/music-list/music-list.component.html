@@ -11,8 +11,8 @@
       </button>
     </mat-form-field>
   </div>
-  <mmy-music-card [musicToDisplay]="musicToDisplay" [isPlaylist]="isPlaylist" (playlistToSave)="playlistToSave($event)"
-    [isMusicotheque]="isMusicotheque" (musicToDelete)="musicToDelete($event)">
+  <mmy-music-card [musicToDisplay]="musicToDisplay" [isPlaylist]="isPlaylist" [isDashboard]="isDashboard"
+    [isMusicotheque]="isMusicotheque" (playlistToSave)="playlistToSave($event)" (musicToDelete)="musicToDelete($event)">
   </mmy-music-card>
 </div>
 <div class="resume" *ngIf="musicsResume">
