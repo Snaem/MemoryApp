@@ -50,7 +50,7 @@
 }
 
 .close-button h2 {
-  color: #FA7332;
+  color: var(--secondary-color);
   padding-left: 20px;
 }
 
@@ -85,4 +85,16 @@
 
 @media screen and (max-width: 768px) {}
 
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+  .search-field {
+    width: 200px;
+  }
+
+  .search-field mat-label {
+    font-size: 1rem;
+  }
+
+  .search-field input {
+    font-size: 0.8rem;
+  }
+}
