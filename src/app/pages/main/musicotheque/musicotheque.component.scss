@@ -52,12 +52,16 @@
 @media screen and (min-width: 1921px) {}
 
 @media screen and (max-width: 1024px) {
+  .musicotheque {
+    width: 90%;
+  }
+
   .navbar {
     width: 5%;
   }
 
   .musics {
-    width: 95%;
+    width: 90%;
   }
 
   .title h1 {

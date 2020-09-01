@@ -133,16 +133,7 @@
 
   .music-cards {
     height: 1200px;
-    width: 580px;
-    border-right: 1px black solid;
-  }
-
-  .card {
-    width: 250px;
-  }
-
-  .thumbnail {
-    width: 250px;
+    width: 975px;
   }
 
   .title h3 {
@@ -158,7 +149,8 @@
 
 @media screen and (max-width: 768px) {
   .music-cards {
-    height: 850px;
+    height: 750px;
+    width: 730px;
   }
 }
 
