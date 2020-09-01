@@ -132,7 +132,21 @@
   }
 
   .music-cards {
-    height: 1140px;
+    height: 1200px;
+    width: 580px;
+    border-right: 1px black solid;
+  }
+
+  .card {
+    width: 250px;
+  }
+
+  .thumbnail {
+    width: 250px;
+  }
+
+  .title h3 {
+    padding-top: 5px;
   }
 }
 
@@ -153,4 +167,3 @@
     height: 650px;
   }
 }
- 
