@@ -3,6 +3,7 @@
   flex-direction: row;
   align-items: center;
   height: 100%;
+  width: 100%;
 }
 
 .navbar {
@@ -52,20 +53,17 @@
 @media screen and (min-width: 1921px) {}
 
 @media screen and (max-width: 1024px) {
-  .musicotheque {
-    width: 70%;
-  }
 
   .navbar {
     width: 5%;
   }
 
   .musics {
-    width: 90%;
+    width: 95%;
   }
 
   .title {
-    height: 10%;
+    height: 5%;
   }
 
   .title h1 {
@@ -73,7 +71,7 @@
   }
 
   .all-music {
-    height: 90%;
+    height: 95%;
   }
 
   .title h1 {
@@ -81,9 +79,25 @@
   }
 }
 
-@media screen and (max-width: 1024px) and (max-height: 768px) {}
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+  .title {
+    height: 10%;
+  }
+
+  .all-music {
+    height: 90%;
+  }
+}
 
 @media screen and (max-width: 768px) {
+  .title {
+    height: 10%;
+  }
+
+  .all-music {
+    height: 90%;
+  }
+
   .title h1 {
     padding-left: 75px;
   }
@@ -92,6 +106,10 @@
 @media screen and (max-width: 480px) {
   .navbar {
     width: 10%;
+  }
+
+  .musics {
+    width: 90%;
   }
 
   .title h1 {
