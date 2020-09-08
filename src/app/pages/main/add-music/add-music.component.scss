@@ -10,14 +10,13 @@
 }
 
 .add-form {
+  height: 100%;
   width: 100%;
-  min-height: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-left: 4px white solid;
 }
 
 .add-form h1 {
@@ -60,6 +59,14 @@ mmy-add-music-form {
 @media screen and (min-width: 1921px) {}
 
 @media screen and (max-width: 1024px) {
+  .navbar {
+    width: 5%;
+  }
+
+  .add-form {
+    width: 95%;
+  }
+
   .add-form h1 {
     font-size: 2.5rem;
   }
@@ -74,8 +81,102 @@ mmy-add-music-form {
 
 }
 
-@media screen and (max-width: 1024px) and (max-height: 768px) {}
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+  .arrow img {
+    height: 60px;
+  }
+}
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 5%;
+  }
 
-@media screen and (max-width: 480px) {}
+  .add-form {
+    width: 95%;
+  }
+
+  .add-form h1 {
+    font-size: 2rem;
+  }
+
+  .add-form h2 {
+    font-size: 1.2rem;
+  }
+
+  .add-form h3 {
+    font-size: 1rem;
+  }
+
+  .arrow img {
+    height: 60px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    width: 10%;
+  }
+
+  .add-form {
+    width: 90%;
+    padding: 0px 15px 0px 15px;
+  }
+
+  .add-form h1 {
+    font-size: 1.5rem;
+  }
+
+  .add-form h2 {
+    font-size: 1rem;
+  }
+
+  .add-form h3 {
+    font-size: 0.8rem;
+  }
+
+  .arrow {
+    margin: 15px 0px 15px 0px;
+  }
+
+  .arrow img {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  .navbar {
+    width: 10%;
+  }
+
+  .add-form {
+    width: 90%;
+    padding: 0px 15px 0px 15px;
+  }
+
+  .add-form h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+
+  .add-form h2 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .add-form h3 {
+    margin: 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+
+  .arrow {
+    margin: 10px 0 10px 0;
+  }
+
+  .arrow img {
+    height: 30px;
+  }
+}

@@ -392,3 +392,23 @@ hr {
     padding: 10px 0px 10px 0px;
   }
 }
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+  #burger-button span {
+    height: 4px;
+  }
+
+  .title img {
+    display: none;
+  }
+
+  .title h3 {
+    padding: 0;
+  }
+
+  .menu li h3 {
+    font-size: 1rem;
+    padding: 5px 0px 5px 0px;
+    margin: 5px 0px 5px 0px;
+  }
+}
