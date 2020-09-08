@@ -160,18 +160,29 @@
     height: 60vh;
     width: 690px;
   }
+
+  .card {
+    height: 320px;
+    width: 210px;
+  }
+
+  .thumbnail {
+    position: relative;
+    height: 200px;
+    width: 210px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .card {
     height: 320px;
-    width: 230px;
+    width: 210px;
   }
 
   .thumbnail {
     position: relative;
-    height: 220px;
-    width: 230px;
+    height: 200px;
+    width: 210px;
   }
 
   .music-cards {
