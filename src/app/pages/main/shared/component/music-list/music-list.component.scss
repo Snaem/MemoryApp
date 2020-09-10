@@ -75,6 +75,10 @@
 @media screen and (min-width: 1921px) {}
 
 @media screen and (max-width: 1024px) {
+  .all-music {
+    padding: 0px 10px 0px 10px;
+  }
+
   .search-bar {
     justify-content: flex-start;
     padding-left: 55px;
