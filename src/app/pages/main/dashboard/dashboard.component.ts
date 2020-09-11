@@ -27,7 +27,6 @@ export class DashboardComponent implements OnInit {
         const miliB = new Date(b.addedAt).getTime();
         return miliA - miliB;
       });
-      console.log(this.allMusic);
       for (let i = this.allMusic.length - 1; i > this.allMusic.length - 6; i--) {
         if (this.allMusic[i] !== undefined) {
           this.firstFiveMusic.push(this.allMusic[i]);
